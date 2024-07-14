@@ -66,7 +66,74 @@ background: linear-gradient(90deg, rgb(0 0 0) 50%, rgb(0 0 0) 100%);
     padding: 5px 10px;
             color: white;
         }
+      .fixed-footer {
+          display: flex;
+          justify-content: space-around;
+          position: fixed;
+          background: black; 
+          padding: 5px 0;
+          border-radius: 50px 50px 0px 0px;
+          box-shadow: 0 0 8px 3px #F92020	, 0 0 16px 5px #F92020; 
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 99;
+          animation: glow 1s infinite alternate;
+      }
       
+      .fixed-footer a {
+          flex-basis: calc((100% - 15px*6)/ 5);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          color: #ffff;         
+          max-width: 50px; 
+          font-size: 12px;
+          font-family: 'concret one'; 
+          font-weight: bold;
+          position: relative;
+          transition: all 0.3s ease;
+          perspective: 500px; 
+      }
+      
+      .fixed-footer a::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(255, 255, 255, 0.3);
+          border-radius: inherit;
+          transition: all 0.3s ease; 
+          transform: rotateY(-90deg);
+          z-index: -1;
+      }
+      
+          .fixed-footer a:active {
+              transform: translateY(2px);
+              box-shadow: none;
+              transition: transform 0.1s ease; 
+          }
+      
+      .fixed-footer img {
+          max-width: 40%;
+          margin-bottom: 0px;
+      }
+      
+      @keyframes glow {
+          0% {
+              box-shadow: 0 0 8px 3px #57b929, 0 0 16px 5px #FF7F50;
+          }
+          50% {
+              box-shadow: 0 0 12px 6px #b7ad25, 0 0 20px 8px #B22222;
+          }
+          100% {
+              box-shadow: 0 0 13px 5px #56d330, 0 0 15px 5px #D2691E;
+          }
+      }
+
     </style>
 </head>
 <body>
@@ -337,7 +404,24 @@ Senin s/d Minggu </td>
 </tr>
 
 </table>
-
+<div class="fixed-footer">
+        <a href="https://join.gratis/kreasitoto" rel="nofollow noopener" target="_blank">
+            <img layout="intrinsic" src="https://brgmediapro.com/gbr/rug-solid-1.png" alt="Promo kreasitoto//">
+            PROMO
+        </a>
+        <a href="https://join.gratis/kreasitoto" rel="nofollow noopener" target="_blank">
+            <img layout="intrinsic" src="https://brgmediapro.com/gbr/user-plus-solid.png" alt="DAFTAR kreasitoto">
+            DAFTAR
+        </a>
+        <a href="https://join.gratis/kreasitoto" rel="nofollow noopener" target="_blank">
+            <img layout="intrinsic" src="https://brgmediapro.com/gbr/user-solid.png" alt="login kreasitoto">
+            MASUK
+        </a>
+        <a href="https://join.gratis/kreasitoto" rel="nofollow noopener" target="_blank" class="js_live_chat_link live-chat-link">
+            <img class="live-chat-icon" layout="intrinsic" src="https://brgmediapro.com/gbr/headset-solid.png" alt="LiveChat kreasitoto">
+            LIVECHAT
+        </a>
+    </div>
 
 
 
